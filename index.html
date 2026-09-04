@@ -21,13 +21,59 @@
 </header>
 
 <section class="hero">
-  <div class="container">
+  <svg class="hero-chart" viewBox="0 0 1100 460" preserveAspectRatio="none" aria-hidden="true">
+    <line class="grid-line" x1="0" y1="90" x2="1100" y2="90"></line>
+    <line class="grid-line" x1="0" y1="200" x2="1100" y2="200"></line>
+    <line class="grid-line" x1="0" y1="310" x2="1100" y2="310"></line>
+    <line class="grid-line" x1="0" y1="420" x2="1100" y2="420"></line>
+
+    <g class="candle" style="animation-delay:0.2s">
+      <rect x="640" y="150" width="14" height="90" fill="#3E7C6B" opacity="0.5"></rect>
+      <line x1="647" y1="130" x2="647" y2="260" stroke="#3E7C6B" stroke-width="2" opacity="0.5"></line>
+    </g>
+    <g class="candle" style="animation-delay:0.4s">
+      <rect x="700" y="190" width="14" height="60" fill="#A15C4A" opacity="0.5"></rect>
+      <line x1="707" y1="175" x2="707" y2="265" stroke="#A15C4A" stroke-width="2" opacity="0.5"></line>
+    </g>
+    <g class="candle" style="animation-delay:0.6s">
+      <rect x="760" y="120" width="14" height="110" fill="#3E7C6B" opacity="0.5"></rect>
+      <line x1="767" y1="100" x2="767" y2="245" stroke="#3E7C6B" stroke-width="2" opacity="0.5"></line>
+    </g>
+    <g class="candle" style="animation-delay:0.8s">
+      <rect x="820" y="160" width="14" height="70" fill="#3E7C6B" opacity="0.5"></rect>
+      <line x1="827" y1="140" x2="827" y2="245" stroke="#3E7C6B" stroke-width="2" opacity="0.5"></line>
+    </g>
+    <g class="candle" style="animation-delay:1s">
+      <rect x="880" y="100" width="14" height="130" fill="#3E7C6B" opacity="0.5"></rect>
+      <line x1="887" y1="80" x2="887" y2="245" stroke="#3E7C6B" stroke-width="2" opacity="0.5"></line>
+    </g>
+
+    <path class="chart-fill" d="M0,340 C120,300 200,360 320,300 C440,240 520,320 640,220 C760,150 860,190 980,110 L1100,90 L1100,460 L0,460 Z"
+      fill="url(#goldFade)"></path>
+    <path class="chart-line" d="M0,340 C120,300 200,360 320,300 C440,240 520,320 640,220 C760,150 860,190 980,110 L1100,90"></path>
+
+    <defs>
+      <linearGradient id="goldFade" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#B8933F" stop-opacity="0.16"></stop>
+        <stop offset="100%" stop-color="#B8933F" stop-opacity="0"></stop>
+      </linearGradient>
+    </defs>
+  </svg>
+
+  <div class="container hero-content">
     <div class="hero-ticker">
-      <span class="up">EGX30 ▲ 0.8%</span>
-      <span class="down">TASI ▼ 0.3%</span>
-      <span class="up">DFM ▲ 1.2%</span>
-      <span>حجم التداول اليومي: 4.2 مليار</span>
-      <span class="up">SP500 ▲ 0.5%</span>
+      <div class="track">
+        <span class="up">EGX30 ▲ 0.8%</span>
+        <span class="down">TASI ▼ 0.3%</span>
+        <span class="up">DFM ▲ 1.2%</span>
+        <span>حجم التداول اليومي: 4.2 مليار</span>
+        <span class="up">SP500 ▲ 0.5%</span>
+        <span class="up">EGX30 ▲ 0.8%</span>
+        <span class="down">TASI ▼ 0.3%</span>
+        <span class="up">DFM ▲ 1.2%</span>
+        <span>حجم التداول اليومي: 4.2 مليار</span>
+        <span class="up">SP500 ▲ 0.5%</span>
+      </div>
     </div>
     <h1>التداول مهارة تُقرأ، مش حظ بيُجرَّب</h1>
     <p class="lede">دورة عملية في تداول الأسهم، من قراءة القوائم المالية للشركة لحد بناء استراتيجية دخول وخروج تقدر تعتمد عليها بنفسك — مع متابعة ومجتمع مستمر بعد الدورة.</p>

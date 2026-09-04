@@ -30,7 +30,7 @@
 <section class="section">
   <div class="container">
     <div class="two-col">
-      <div class="panel">
+      <div class="panel panel-price">
         <div class="price-block">
           <span class="amount">399$</span>
           <span class="cycle">دفعة واحدة</span>
@@ -46,29 +46,67 @@
         </p>
       </div>
 
-      <div>
-        <h2 style="font-size:1.6rem; margin-bottom:20px;">إزاي تكمل الاشتراك</h2>
-        <div class="row-list">
-          <div class="row-item">
-            <span class="idx">١</span>
-            <div>
-              <h3>راسلنا بالإيميل</h3>
-              <p>ابعت طلب اشتراك على الإيميل تحت، وهنرد عليك بتفاصيل الدفع والخطوات.</p>
-            </div>
+      <div class="panel">
+        <h3 style="margin-bottom:12px;">ليه السعر ثابت؟</h3>
+        <p style="color:var(--muted); font-size:0.95rem;">مفيش باقات ولا رسوم إضافية بتتكشف بعدين — دفعة واحدة وكل المحتوى والمجتمع والدعم بيبقوا متاحين ليك.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <h2>طلب اشتراك سريع</h2>
+      <span class="num-mark">03 / الاشتراك</span>
+    </div>
+    <div class="two-col">
+      <div class="form-panel">
+        <form onsubmit="event.preventDefault(); window.location.href='mailto:bentaheraymen18@gmail.com?subject=' + encodeURIComponent('طلب اشتراك في الدورة') + '&body=' + encodeURIComponent('الاسم: ' + document.getElementById('f-name').value + '%0Aالبريد: ' + document.getElementById('f-email').value + '%0Aرسالة: ' + document.getElementById('f-msg').value);">
+          <div class="form-group">
+            <label for="f-name">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+              الاسم الكامل
+            </label>
+            <input type="text" id="f-name" placeholder="اكتب اسمك" required>
           </div>
-          <div class="row-item">
-            <span class="idx">٢</span>
-            <div>
-              <h3>تأكيد الدفع</h3>
-              <p>بعد التحويل، ابعت لنا إثبات الدفع على نفس الإيميل لتفعيل اشتراكك.</p>
-            </div>
+          <div class="form-group">
+            <label for="f-email">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z" opacity="0"/><path d="M22 6l-10 7L2 6"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg>
+              البريد الإلكتروني
+            </label>
+            <input type="email" id="f-email" placeholder="example@email.com" required>
           </div>
-          <div class="row-item">
-            <span class="idx">٣</span>
-            <div>
-              <h3>استلام الوصول</h3>
-              <p>هتستلم رابط الدخول للفيديوهات ودعوة الانضمام لمجتمع المتداولين.</p>
-            </div>
+          <div class="form-group">
+            <label for="f-msg">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+              رسالتك (اختياري)
+            </label>
+            <textarea id="f-msg" placeholder="أي سؤال أو ملاحظة قبل الاشتراك"></textarea>
+          </div>
+          <button type="submit" class="form-submit">إرسال طلب الاشتراك</button>
+        </form>
+      </div>
+      <div class="row-list">
+        <div class="row-item">
+          <span class="idx">١</span>
+          <div>
+            <h3>هيتفتح لك برنامج الإيميل</h3>
+            <p>الفورم فوق بيجهزلك رسالة إيميل جاهزة ببياناتك، تدوس إرسال وخلاص.</p>
+          </div>
+        </div>
+        <div class="row-item">
+          <span class="idx">٢</span>
+          <div>
+            <h3>هنرد عليك بتفاصيل الدفع</h3>
+            <p>هتوصلك تفاصيل الدفع وعنوان محفظة Bybit على نفس الإيميل اللي كتبته.</p>
+          </div>
+        </div>
+        <div class="row-item">
+          <span class="idx">٣</span>
+          <div>
+            <h3>تفعيل الاشتراك</h3>
+            <p>بعد تأكيد الدفع، هتستلم رابط الوصول للدورة ودعوة المجتمع.</p>
           </div>
         </div>
       </div>
