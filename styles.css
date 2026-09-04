@@ -1,27 +1,27 @@
 /* ===== Design tokens =====
-   Base:      #0E1013  (charcoal-navy, almost-black)
-   Panel:     #171A1F  (raised surface)
-   Line:      #2A2E35  (hairline dividers, table-style)
-   Ink:       #ECE9E2  (warm off-white text)
-   Muted:     #9A9C9F  (secondary text)
-   Gold:      #B8933F  (ticker gold — the one bold accent)
-   Rise:      #3E7C6B  (muted market-green, used sparingly for "gain" cues)
+   Base:      #150F22  (deep aubergine-purple, near-black)
+   Panel:     #201933  (raised purple surface)
+   Line:      #362B4D  (hairline dividers)
+   Ink:       #EDEAF6  (soft lavender-white text)
+   Muted:     #A79EC4  (secondary text)
+   Accent:    #22A579  (emerald — the one bold accent, var name kept as --gold)
+   Rise:      #22A579  (same emerald, used for "gain" ticker cues)
    Display type: "Fraunces" (serif, financial-print authority)
-   Body type:    "IBM Plex Sans Arabic" for Arabic copy, "IBM Plex Sans" for latin
+   Body type:    "IBM Plex Sans Arabic" for Arabic copy, "IBM Plex Sans" for Latin (EN/FR)
 */
 
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap');
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --base: #0E1013;
-  --panel: #171A1F;
-  --line: #2A2E35;
-  --ink: #ECE9E2;
-  --muted: #9A9C9F;
-  --gold: #B8933F;
-  --rise: #3E7C6B;
+  --base: #150F22;
+  --panel: #201933;
+  --line: #362B4D;
+  --ink: #EDEAF6;
+  --muted: #A79EC4;
+  --gold: #22A579;
+  --rise: #22A579;
 }
 
 html { scroll-behavior: smooth; }
@@ -33,6 +33,10 @@ body {
   font-size: 17px;
   line-height: 1.7;
   direction: rtl;
+}
+
+body.lang-latin {
+  font-family: 'IBM Plex Sans', sans-serif;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -95,15 +99,50 @@ header {
 
 .nav-links a.active { color: var(--gold); }
 
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+@media (max-width: 480px) {
+  .nav-right .nav-cta { display: none; }
+}
+
 .nav-cta {
   border: 1px solid var(--gold);
   color: var(--gold) !important;
   padding: 8px 20px;
-  border-radius: 2px;
+  border-radius: 14px;
   font-size: 0.9rem;
 }
 
 .nav-cta:hover { background: var(--gold); color: var(--base) !important; }
+
+/* ---------- Language switcher ---------- */
+.lang-switch {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 4px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.78rem;
+}
+
+.lang-switch a {
+  padding: 6px 12px;
+  border-radius: 10px;
+  color: var(--muted);
+}
+
+.lang-switch a:hover { color: var(--ink); }
+
+.lang-switch a.lang-active {
+  background: var(--gold);
+  color: var(--base);
+}
 
 /* ---------- Hero ---------- */
 .hero {
@@ -112,7 +151,7 @@ header {
   position: relative;
   overflow: hidden;
   background:
-    radial-gradient(ellipse 60% 50% at 85% 0%, rgba(184,147,63,0.10), transparent 60%);
+    radial-gradient(ellipse 60% 50% at 85% 0%, rgba(34,165,121,0.12), transparent 60%);
 }
 
 .hero-chart {
@@ -190,7 +229,7 @@ header {
 }
 
 .hero-ticker .up { color: var(--rise); }
-.hero-ticker .down { color: #A15C4A; }
+.hero-ticker .down { color: #C2607A; }
 
 .hero-content { position: relative; z-index: 2; }
 
@@ -217,7 +256,7 @@ header {
   background: var(--gold);
   color: var(--base);
   padding: 14px 32px;
-  border-radius: 2px;
+  border-radius: 14px;
   font-weight: 600;
   font-size: 0.98rem;
   display: inline-block;
@@ -333,7 +372,7 @@ header {
 .panel {
   background: var(--panel);
   padding: 40px;
-  border-radius: 3px;
+  border-radius: 16px;
   border: 1px solid var(--line);
 }
 
@@ -343,8 +382,8 @@ header {
   font-style: italic;
   line-height: 1.5;
   color: var(--ink);
-  border-right: 2px solid var(--gold);
-  padding-right: 24px;
+  border-inline-start: 2px solid var(--gold);
+  padding-inline-start: 24px;
 }
 
 .quote cite {
@@ -396,9 +435,9 @@ header {
 
 /* ---------- Form ---------- */
 .form-panel {
-  background: linear-gradient(180deg, var(--panel), #14171C);
+  background: linear-gradient(180deg, var(--panel), #1A1428);
   border: 1px solid var(--line);
-  border-radius: 4px;
+  border-radius: 16px;
   padding: 40px;
   position: relative;
 }
@@ -407,9 +446,9 @@ header {
   content: "";
   position: absolute;
   inset: 0;
-  border-radius: 4px;
+  border-radius: 16px;
   padding: 1px;
-  background: linear-gradient(135deg, rgba(184,147,63,0.5), transparent 40%);
+  background: linear-gradient(135deg, rgba(34,165,121,0.5), transparent 40%);
   -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
@@ -437,21 +476,21 @@ header {
   border: 1px solid var(--line);
   color: var(--ink);
   padding: 15px 18px;
-  border-radius: 3px;
+  border-radius: 14px;
   font-family: inherit;
   font-size: 0.98rem;
   transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
 }
 
 .form-group input::placeholder,
-.form-group textarea::placeholder { color: #5C5F65; }
+.form-group textarea::placeholder { color: #6E6484; }
 
 .form-group input:focus,
 .form-group textarea:focus {
   outline: none;
   border-color: var(--gold);
-  background: rgba(184,147,63,0.04);
-  box-shadow: 0 0 0 3px rgba(184,147,63,0.12);
+  background: rgba(34,165,121,0.05);
+  box-shadow: 0 0 0 3px rgba(34,165,121,0.14);
 }
 
 .form-group textarea { resize: vertical; min-height: 120px; }
@@ -462,7 +501,7 @@ header {
   color: var(--base);
   border: none;
   padding: 16px 32px;
-  border-radius: 3px;
+  border-radius: 14px;
   font-weight: 600;
   font-size: 1rem;
   font-family: inherit;
@@ -470,14 +509,14 @@ header {
   transition: background 0.2s ease, transform 0.15s ease;
 }
 
-.form-submit:hover { background: #cba552; }
+.form-submit:hover { background: #2CC090; }
 .form-submit:active { transform: scale(0.99); }
 
 /* ---------- Payment note box ---------- */
 .notice {
   border: 1px dashed var(--line);
   padding: 24px;
-  border-radius: 2px;
+  border-radius: 16px;
   color: var(--muted);
   font-size: 0.92rem;
 }
