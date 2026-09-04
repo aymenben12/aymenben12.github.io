@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact &amp; Enroll | Aymen</title>
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body class="lang-latin">
+
+<header>
+  <nav class="nav">
+    <div class="brand">Aymen<span>.</span></div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="course.html">Course</a>
+      <a href="contact.html" class="active">Contact &amp; Enroll</a>
+    </div>
+    <div class="nav-right">
+      <a href="contact.html" class="nav-cta">Enroll now</a>
+      <div class="lang-switch">
+        <a href="../contact.html">AR</a>
+        <a href="contact.html" class="lang-active">EN</a>
+        <a href="../fr/contact.html">FR</a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<section class="hero" style="padding-bottom:48px;">
+  <div class="container">
+    <h1 style="max-width:18ch;">One step, full access to the course</h1>
+    <p class="lede">A one-time fixed price, covering all six modules, plus ongoing access to the community and support.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="two-col">
+      <div class="panel panel-price">
+        <div class="price-block">
+          <span class="amount">$399</span>
+          <span class="cycle">one-time payment</span>
+        </div>
+        <ul class="check-list">
+          <li>Full access to all six modules + videos</li>
+          <li>Lifetime membership in the trader community</li>
+          <li>Ongoing support and follow-up after the course</li>
+          <li>Future updates to the content</li>
+        </ul>
+        <p style="color:var(--muted); font-size:0.88rem; margin-top:20px;">
+          Price ranges between $300 and $500 depending on any current offers at the time of enrolling — message us to confirm the final price.
+        </p>
+      </div>
+
+      <div class="panel">
+        <h3 style="margin-bottom:12px;">Why a fixed price?</h3>
+        <p style="color:var(--muted); font-size:0.95rem;">No tiers, no extra fees that show up later — one payment, and all the content, community and support stay available to you.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <h2>Quick enrollment request</h2>
+      <span class="num-mark">03 / Enroll</span>
+    </div>
+    <div class="two-col">
+      <div class="form-panel">
+        <form onsubmit="event.preventDefault(); window.location.href='mailto:bentaheraymen18@gmail.com?subject=' + encodeURIComponent('Course enrollment request') + '&body=' + encodeURIComponent('Name: ' + document.getElementById('f-name').value + '%0AEmail: ' + document.getElementById('f-email').value + '%0AMessage: ' + document.getElementById('f-msg').value);">
+          <div class="form-group">
+            <label for="f-name">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+              Full name
+            </label>
+            <input type="text" id="f-name" placeholder="Your name" required>
+          </div>
+          <div class="form-group">
+            <label for="f-email">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 6l-10 7L2 6"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg>
+              Email address
+            </label>
+            <input type="email" id="f-email" placeholder="example@email.com" required>
+          </div>
+          <div class="form-group">
+            <label for="f-msg">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+              Your message (optional)
+            </label>
+            <textarea id="f-msg" placeholder="Any question or note before enrolling"></textarea>
+          </div>
+          <button type="submit" class="form-submit">Send enrollment request</button>
+        </form>
+      </div>
+      <div class="row-list">
+        <div class="row-item">
+          <span class="idx">1</span>
+          <div>
+            <h3>Your email app will open</h3>
+            <p>The form above prepares an email with your details ready to go — just hit send.</p>
+          </div>
+        </div>
+        <div class="row-item">
+          <span class="idx">2</span>
+          <div>
+            <h3>We'll reply with payment details</h3>
+            <p>You'll receive the payment details and the Bybit wallet address at the same email you wrote.</p>
+          </div>
+        </div>
+        <div class="row-item">
+          <span class="idx">3</span>
+          <div>
+            <h3>Enrollment activation</h3>
+            <p>After payment confirmation, you'll receive the course access link and a community invite.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="border-bottom:none;">
+  <div class="container">
+    <div class="two-col">
+      <div>
+        <h2 style="font-size:1.5rem; margin-bottom:16px;">Contact</h2>
+        <p style="color:var(--muted); margin-bottom:8px;">For questions or enrollment, reach out directly:</p>
+        <p style="font-family:'IBM Plex Mono',monospace; font-size:1.1rem; color:var(--gold);">
+          bentaheraymen18@gmail.com
+        </p>
+      </div>
+
+      <div class="notice">
+        <strong>A note on payment:</strong>
+        Bybit wallet payment details are sent directly to enrollees by email after contact, and aren't published on the site for security reasons.
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="container">
+  <span>© 2026 Aymen — Stock trading course</span>
+  <span>Home · Course · Contact &amp; Enroll</span>
+</footer>
+
+</body>
+  </html>
