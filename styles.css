@@ -37,6 +37,7 @@ body {
 
 body.lang-latin {
   font-family: 'IBM Plex Sans', sans-serif;
+  direction: ltr;
 }
 
 @media (prefers-reduced-motion: reduce) {
