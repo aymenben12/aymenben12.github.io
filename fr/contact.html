@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact &amp; Inscription | Aymen</title>
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body class="lang-latin">
+
+<header>
+  <nav class="nav">
+    <div class="brand">Aymen<span>.</span></div>
+    <div class="nav-links">
+      <a href="index.html">Accueil</a>
+      <a href="course.html">Formation</a>
+      <a href="contact.html" class="active">Contact &amp; Inscription</a>
+    </div>
+    <div class="nav-right">
+      <a href="contact.html" class="nav-cta">S'inscrire</a>
+      <div class="lang-switch">
+        <a href="../contact.html">AR</a>
+        <a href="../en/contact.html">EN</a>
+        <a href="contact.html" class="lang-active">FR</a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<section class="hero" style="padding-bottom:48px;">
+  <div class="container">
+    <h1 style="max-width:18ch;">Une étape, un accès complet à la formation</h1>
+    <p class="lede">Prix fixe et unique, couvrant les six modules, avec un accès continu à la communauté et au suivi.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="two-col">
+      <div class="panel panel-price">
+        <div class="price-block">
+          <span class="amount">399$</span>
+          <span class="cycle">paiement unique</span>
+        </div>
+        <ul class="check-list">
+          <li>Accès complet aux six modules + vidéos</li>
+          <li>Adhésion à vie à la communauté de traders</li>
+          <li>Suivi et support continus après la formation</li>
+          <li>Mises à jour futures du contenu</li>
+        </ul>
+        <p style="color:var(--muted); font-size:0.88rem; margin-top:20px;">
+          Le prix varie entre 300$ et 500$ selon les offres en cours au moment de l'inscription — contactez-nous pour la confirmation finale.
+        </p>
+      </div>
+
+      <div class="panel">
+        <h3 style="margin-bottom:12px;">Pourquoi un prix fixe ?</h3>
+        <p style="color:var(--muted); font-size:0.95rem;">Pas de formules ni de frais supplémentaires cachés — un seul paiement, et tout le contenu, la communauté et le support restent disponibles.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <h2>Demande d'inscription rapide</h2>
+      <span class="num-mark">03 / Inscription</span>
+    </div>
+    <div class="two-col">
+      <div class="form-panel">
+        <form onsubmit="event.preventDefault(); window.location.href='mailto:bentaheraymen18@gmail.com?subject=' + encodeURIComponent('Demande d\'inscription à la formation') + '&body=' + encodeURIComponent('Nom : ' + document.getElementById('f-name').value + '%0AEmail : ' + document.getElementById('f-email').value + '%0AMessage : ' + document.getElementById('f-msg').value);">
+          <div class="form-group">
+            <label for="f-name">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+              Nom complet
+            </label>
+            <input type="text" id="f-name" placeholder="Votre nom" required>
+          </div>
+          <div class="form-group">
+            <label for="f-email">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 6l-10 7L2 6"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg>
+              Adresse email
+            </label>
+            <input type="email" id="f-email" placeholder="exemple@email.com" required>
+          </div>
+          <div class="form-group">
+            <label for="f-msg">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+              Votre message (optionnel)
+            </label>
+            <textarea id="f-msg" placeholder="Une question avant de vous inscrire ?"></textarea>
+          </div>
+          <button type="submit" class="form-submit">Envoyer la demande</button>
+        </form>
+      </div>
+      <div class="row-list">
+        <div class="row-item">
+          <span class="idx">1</span>
+          <div>
+            <h3>Votre messagerie s'ouvrira</h3>
+            <p>Le formulaire ci-dessus prépare un email avec vos informations, il ne reste qu'à l'envoyer.</p>
+          </div>
+        </div>
+        <div class="row-item">
+          <span class="idx">2</span>
+          <div>
+            <h3>Nous répondons avec les détails de paiement</h3>
+            <p>Vous recevrez les détails de paiement et l'adresse du portefeuille Bybit sur le même email.</p>
+          </div>
+        </div>
+        <div class="row-item">
+          <span class="idx">3</span>
+          <div>
+            <h3>Activation de l'inscription</h3>
+            <p>Après confirmation du paiement, vous recevrez le lien d'accès à la formation et une invitation à la communauté.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="border-bottom:none;">
+  <div class="container">
+    <div class="two-col">
+      <div>
+        <h2 style="font-size:1.5rem; margin-bottom:16px;">Contact</h2>
+        <p style="color:var(--muted); margin-bottom:8px;">Pour toute question ou inscription, contactez-nous directement :</p>
+        <p style="font-family:'IBM Plex Mono',monospace; font-size:1.1rem; color:var(--gold);">
+          bentaheraymen18@gmail.com
+        </p>
+      </div>
+
+      <div class="notice">
+        <strong>Note sur le paiement :</strong>
+        Les détails du portefeuille Bybit sont envoyés directement par email après contact, et ne sont pas publiés sur le site pour des raisons de sécurité.
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="container">
+  <span>© 2026 Aymen — Formation en trading d'actions</span>
+  <span>Accueil · Formation · Contact &amp; Inscription</span>
+</footer>
+
+</body>
+</html>
